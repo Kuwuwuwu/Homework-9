@@ -1,4 +1,34 @@
+:root {
+   --font-family:"Roboto", sans-serif;
+   --color-grey:#EEEFF1;
+   --color-light-grey:#F9F9F9;
+   --color-blue:#34547A;
+}
+
 * {
     box-sizing: border-box;
 }
+ body{
+    background-color: var(--color-light-grey) ;
+ }
+.container {
+    font-family: var(--font-family);
+    font-size: 16px;
+    margin-inline: auto;
+    width: min(100% - 40px, 1110px);
+}
 
+.grey-bg {
+    background-color: var(--color-grey);
+}
+.blue-bg {
+    background-color: var(--color-blue);
+}
+.navbar__list {
+  display: flex;
+  gap: 42px;
+  text-transform: uppercase;
+}
+ .navbar__list li {
+    letter-spacing: 1px;
+ }
