@@ -7,7 +7,7 @@
    --color-white:#FFFFFF;
    --primary-letter-spacing: 1px;
    --primary-line-height: 26px;
-   --font-weight-md:
+   --font-weight-md: 32px;
 }
 
 * {
@@ -30,7 +30,6 @@ body {
 .text__description {
    color: var(--color-dark-grey);
    font-size: 16px;
-   font-weight: 400px;
    letter-spacing: 0.3px;
    margin-bottom: 60px;
    max-width: 540px; 
@@ -56,6 +55,7 @@ body {
 .container {
     font-family: var(--font-family);
     font-size: 16px;
+    line-height: var(--primary-line-height);
     font-weight: 400px;
     margin-inline: auto;
     width: min(100% - 40px, 1110px);
@@ -90,6 +90,7 @@ h2 {
 
 .about-me {
    padding-block: 112px 100px;
+   text-align: center;
 }
 
 .about-me__description {
@@ -97,15 +98,34 @@ h2 {
     margin-top: 50px;
 }
 
-
+.projects {
+    padding-block: 100px;
+}
 .projects-item {
     background: no-repeat url("./images/project.svg");
+    width: 50px;
+    height: 50px;
+    padding-left: 70px;
 }
 
-.about-work {
-
+.projects-items {
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer {
+h3 {
+    font-size: var(--font-weight-md);
+    color: var(--color-white);
+}
 
+.projects-item-title {
+    color: var(--color-white);
+    font-weight: var(--font-weight-md);
+    font-size: 21px;
+    line-height: var(--primary-line-height);
+}
+
+.projects-item-subtitle {
+    color: var(--color-white);
+    font-size: 16px;
 }
