@@ -135,3 +135,13 @@ h3 {
     padding-block: 100px;
 }
 
+.about-work__content iframe {
+    width: 1110px;
+    height: 600px;
+}
+
+.footer {
+    padding-block: 50px;
+    font-weight: var(--font-weight-md);
+}
+
