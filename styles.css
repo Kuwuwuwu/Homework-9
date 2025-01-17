@@ -52,7 +52,7 @@ body {
     margin-bottom: 162px;
 
 }
-.conteiner {
+.container {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: var(--primary-line-height);
@@ -86,6 +86,11 @@ h2 {
     font-weight: var(--font-weight-md);
     font-size: 2rem;
     line-height: 37px;
+}
+
+h3 {
+    font-size: var(--font-weight-md);
+    color: var(--color-white);
 }
 
 .about-me {
@@ -124,13 +129,6 @@ h2 {
     color: var(--color-white);
     line-height: var(--primary-line-height);
 }
-
-h3 {
-    font-size: var(--font-weight-md);
-    color: var(--color-white);
-}
-
-
 
 .about-work {
     text-align: center;
