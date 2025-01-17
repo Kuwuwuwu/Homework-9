@@ -127,5 +127,11 @@ h3 {
 
 .projects-item-subtitle {
     color: var(--color-white);
-    font-size: 16px;
+    line-height: var(--primary-line-height);
 }
+
+.about-work {
+    text-align: center;
+    padding-block: 100px;
+}
+
