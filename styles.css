@@ -5,7 +5,7 @@
    --color-blue:#34547A;
    --color-dark-grey:#727272;
    --color-white:#FFFFFF;
-   --primary-letter-spacing: 1px;
+   --primary-letter-spacing: 1.5px;
    --primary-line-height: 26px;
    --font-weight-md: 32px;
 }
@@ -101,16 +101,17 @@ h2 {
 .projects {
     padding-block: 100px;
 }
+
+.projects-items {
+    display: flex;
+    justify-content: space-between;
+}
+
 .projects-item {
     background: no-repeat url("./images/project.svg");
     width: 50px;
     height: 50px;
     padding-left: 70px;
-}
-
-.projects-items {
-    display: flex;
-    justify-content: space-between;
 }
 
 h3 {
@@ -142,6 +143,18 @@ h3 {
 
 .footer {
     padding-block: 50px;
-    font-weight: var(--font-weight-md);
 }
 
+.footer__name {
+    font-weight: var(--font-weight-md);
+    line-height: 25px;
+    font-size: 21px;
+    color: var(--color-white);
+    margin-bottom: 20px;
+}
+
+.footer__copyright {
+    line-height: 21px;
+    font-size: 13px;
+    color: var(--color-white);
+}
