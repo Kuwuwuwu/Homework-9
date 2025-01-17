@@ -88,11 +88,6 @@ h2 {
     line-height: 37px;
 }
 
-h3 {
-    font-size: var(--font-weight-md);
-    color: var(--color-white);
-}
-
 .about-me {
    padding-block: 112px 100px;
    text-align: center;
