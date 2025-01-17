@@ -52,7 +52,7 @@ body {
     margin-bottom: 162px;
 
 }
-.conteiner {
+.container {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: var(--primary-line-height);
