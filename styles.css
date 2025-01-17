@@ -52,7 +52,7 @@ body {
     margin-bottom: 162px;
 
 }
-.container {
+.conteiner {
     font-family: var(--font-family);
     font-size: 16px;
     line-height: var(--primary-line-height);
@@ -104,14 +104,25 @@ h2 {
 
 .projects-items {
     display: flex;
-    justify-content: space-between;
+    gap: 45px;
 }
 
 .projects-item {
     background: no-repeat url("./images/project.svg");
-    width: 50px;
     height: 50px;
     padding-left: 70px;
+}
+
+.projects-item-title {
+    color: var(--color-white);
+    font-weight: var(--font-weight-md);
+    font-size: 21px;
+    line-height: 25px;
+}
+
+.projects-item-subtitle {
+    color: var(--color-white);
+    line-height: var(--primary-line-height);
 }
 
 h3 {
@@ -119,17 +130,7 @@ h3 {
     color: var(--color-white);
 }
 
-.projects-item-title {
-    color: var(--color-white);
-    font-weight: var(--font-weight-md);
-    font-size: 21px;
-    line-height: var(--primary-line-height);
-}
 
-.projects-item-subtitle {
-    color: var(--color-white);
-    line-height: var(--primary-line-height);
-}
 
 .about-work {
     text-align: center;
