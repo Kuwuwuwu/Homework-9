@@ -1,3 +1,117 @@
+/* Media queries for responsiveness */
+
+/* For mobile */
+@media screen and (max-width: 767px) {
+.header__tittle {
+        font-size: 2rem;
+        line-height: 40px;
+}
+
+.text__description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    max-width: 90%;
+}
+
+.header__button {
+    padding: 15px 25px;
+    font-size: 14px;
+}
+
+.navbar__list {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.projects-items {
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projects-item {
+    padding-left: 40px;
+    height: 100px;
+}
+
+.about-work__content iframe {
+    width: 100%;
+    height: 400px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.footer__name {
+    font-size: 18px;
+}
+
+.footer__copyright {
+    font-size: 12px;
+}
+}
+
+/* For tablets (768px-1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.header__tittle {
+    font-size: 2.5rem;
+    line-height: 60px;
+}
+.text__description {
+    font-size: 15px;
+    max-width: 80%;
+    margin-bottom: 40px;
+}
+
+.header__button {
+    padding: 18px 35px;
+    font-size: 15px;
+}
+
+.navbar__list {
+    gap: 30px;
+}
+
+.projects-items {
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.projects-item {
+    padding-left: 60px;
+    height: 80px;
+}
+
+.about-work__content iframe {
+    width: 90%;
+    height: 500px;
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+.footer__name {
+    font-size: 20px;
+}
+}
+
+/* For dekstop (more 1024px) */
+@media screen and (min-width: 1024px) {
+.header__tittle {
+    font-size: 3.5rem;
+    line-height: 79px;
+}
+}
+
+/* Basic styles*/
 :root {
    --font-family:"Roboto", sans-serif;
    --color-grey:#EEEFF1;
