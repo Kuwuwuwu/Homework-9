@@ -199,7 +199,7 @@ h2 {
   
    .about-work__content iframe {
     width: 90%;
-    height: 200px; /*сan be change*/
+    height: 200px; /*сan be change for small mobile*/
     max-height: 400px; 
     margin: 0 auto; 
     display: block;
