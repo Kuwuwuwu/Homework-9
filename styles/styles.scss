@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@use "variables" as vars;
+@use "mixins";
 
 * {
   box-sizing: border-box;
