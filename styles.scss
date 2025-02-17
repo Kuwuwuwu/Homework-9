@@ -1,0 +1,295 @@
+@import "variables";
+@import "mixins";
+
+/* Basic styles*/
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: $color-light-grey;
+}
+
+.container {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: $primary-line-height;
+    font-weight: 400px;
+    margin-inline: auto;
+    width: min(100% - 40px, 1110px);
+}
+
+.grey-bg {
+    background-color: $color-grey;
+}
+.blue-bg {
+    background-color: $color-blue;
+}
+
+h2 {
+    font-weight: $font-weight-md;
+    font-size: 2rem;
+    line-height: 37px;
+}
+
+.text__description {
+    color: $color-dark-grey;
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    margin-bottom: 60px;
+    max-width: 540px;
+    line-height: $primary-line-height;
+}
+
+.header {
+    padding-block: 80px 140px;
+
+    &__tittle {
+        font-weight: 500;
+        line-height: 79px;
+        font-size: 3rem;
+    }
+    &__button {
+        @include button($color-blue, $color-white);
+    }
+}
+
+.navbar {
+    margin-bottom: 162px;
+
+    &__list {
+        @include flex-center(row, 42px);
+        text-transform: uppercase;
+    }
+    li {
+        letter-spacing: $primary-letter-spacing;
+    }
+
+    &__list-item--active {
+        color: $color-blue;
+        font-weight: $font-weight-md;
+    }
+}
+
+.about-me {
+    padding-block: 112px 100px;
+    text-align: center;
+
+    &__description {
+        margin-inline: auto;
+        margin-top: 50px;
+    }
+}
+
+.about-work {
+    text-align: center;
+    padding-block: 100px;
+
+    &__content {
+        iframe {
+            width: 1110px;
+            height: 600px;
+        }
+    }
+}
+
+.projects {
+    padding-block: 100px;
+
+    &-items {
+        @include flex-center(row, 45px);
+    }
+
+    &-item {
+        background: no-repeat url("./images/project.svg");
+        height: 50px;
+        padding-left: 70px;
+        color: $color-white;
+    }
+
+    &-title {
+        color: $color-white;
+        font-weight: $font-weight-md;
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    &-subtitle {
+        color: $color-white;
+        line-height: $primary-line-height;
+    }
+}
+
+.footer {
+    padding-block: 50px;
+
+    &__name {
+        font-weight: $font-weight-md;
+        line-height: 25px;
+        font-size: 21px;
+        color: $color-white;
+        margin-bottom: 20px;
+    }
+
+    &__copyright {
+        line-height: 21px;
+        font-size: 13px;
+        color: $color-white;
+    }
+}
+
+/* Media Queries */
+@include media("mobile") {
+    .header__tittle {
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .text__description {
+        font-size: 14px;
+        margin-bottom: 30px;
+        max-width: 90%;
+    }
+
+    .header__button {
+        padding: 15px 25px;
+        font-size: 14px;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .projects-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .projects-item {
+        padding-left: 60px;
+        height: 80px;
+    }
+
+    .about-work__content iframe {
+        width: 90%;
+        height: 200px;
+        max-height: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .footer__name {
+        font-size: 18px;
+    }
+
+    .footer__copyright {
+        font-size: 12px;
+    }
+}
+
+/* For tablets (768px-1024px) */
+@include media("tablet") {
+    .header__tittle {
+        font-size: 2.5rem;
+        line-height: 60px;
+    }
+
+    .text__description {
+        font-size: 15px;
+        max-width: 80%;
+        margin-bottom: 40px;
+    }
+
+    .header__button {
+        padding: 18px 35px;
+        font-size: 15px;
+    }
+
+    .navbar__list {
+        gap: 30px;
+    }
+
+    .projects-items {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .projects-item {
+        padding-left: 60px;
+        height: 80px;
+    }
+
+    .about-work__content iframe {
+        width: 90%;
+        height: 500px;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .footer__name {
+        font-size: 20px;
+    }
+}
+
+@include media("desktop") {
+    .header__tittle {
+        font-size: 3.5rem;
+        line-height: 79px;
+    }
+
+    .text__description {
+        font-size: 16px;
+        max-width: 70%;
+    }
+
+    .header__button {
+        padding: 20px 40px;
+        font-size: 16px;
+    }
+
+    .navbar__list {
+        gap: 40px;
+    }
+
+    .projects-items {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .projects-item {
+        padding-left: 80px;
+        height: 120px;
+    }
+
+    .about-work__content iframe {
+        width: 80%;
+        height: 600px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .footer__name {
+        font-size: 22px;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+    }
+}
