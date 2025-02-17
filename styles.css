@@ -1,7 +1,7 @@
-/* Basic styles*/
 /* Mixin for Media Queries */
 /* Mixin for Flexbox layout */
 /* Mixin for Button Styles */
+/* Basic styles*/
 * {
   box-sizing: border-box;
 }
@@ -113,6 +113,7 @@ h2 {
   background: no-repeat url("./images/project.svg");
   height: 50px;
   padding-left: 70px;
+  color: #FFFFFF;
 }
 .projects-title {
   color: #FFFFFF;

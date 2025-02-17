@@ -1,6 +1,7 @@
-/* Basic styles*/
 @import "variables";
 @import "mixins";
+
+/* Basic styles*/
 
 * {
     box-sizing: border-box;
@@ -103,6 +104,7 @@ h2 {
         background: no-repeat url("./images/project.svg");
         height: 50px;
         padding-left: 70px;
+        color: $color-white;
     }
 
     &-title {
