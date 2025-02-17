@@ -1,144 +1,144 @@
-@use "variables" as vars;
-@use "mixins";
-
+/* Basic styles*/
+/* Mixin for Media Queries */
+/* Mixin for Flexbox layout */
+/* Mixin for Button Styles */
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: $color-light-grey;
-}
-
-.header {
-  padding-block: 80px 140px;
-
-  &__tittle {
-    font-weight: 500;
-    line-height: 79px;
-    font-size: 3rem;
-  }
-}
-
-.text__description {
-  color: $color-dark-grey;
-  font-size: 16px;
-  letter-spacing: 0.3px;
-  margin-bottom: 60px;
-  max-width: 540px;
-  line-height: $primary-line-height;
-}
-
-.header__button {
-  @include button-styles($color-blue, $color-white);
-}
-
-.navbar {
-  margin-bottom: 162px;
-  
-  &__list {
-    display: flex;
-    gap: 42px;
-    text-transform: uppercase;
-    
-    li {
-      letter-spacing: $primary-letter-spacing;
-    }
-  }
-
-  &__list-item--active {
-    color: $color-blue;
-    font-weight: $font-weight-md;
-  }
+  background-color: #F9F9F9;
 }
 
 .container {
-  font-family: $font-family;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
-  line-height: $primary-line-height;
-  font-weight: 400;
+  line-height: 26px;
+  font-weight: 400px;
   margin-inline: auto;
   width: min(100% - 40px, 1110px);
 }
 
 .grey-bg {
-  background-color: $color-grey;
+  background-color: #EEEFF1;
 }
 
 .blue-bg {
-  background-color: $color-blue;
+  background-color: #34547A;
 }
 
 h2 {
-  font-weight: $font-weight-md;
+  font-weight: 32px;
   font-size: 2rem;
   line-height: 37px;
+}
+
+.text__description {
+  color: #727272;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  margin-bottom: 60px;
+  max-width: 540px;
+  line-height: 26px;
+}
+
+.header {
+  padding-block: 80px 140px;
+}
+.header__tittle {
+  font-weight: 500;
+  line-height: 79px;
+  font-size: 3rem;
+}
+.header__button {
+  border: 0;
+  background-color: #34547A;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 20px 41px;
+  line-height: 27px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.navbar {
+  margin-bottom: 162px;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  gap: 42px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navbar li {
+  letter-spacing: 1.5px;
+}
+.navbar__list-item--active {
+  color: #34547A;
+  font-weight: 32px;
 }
 
 .about-me {
   padding-block: 112px 100px;
   text-align: center;
-
-  &__description {
-    margin-inline: auto;
-    margin-top: 50px;
-  }
 }
-
-.projects {
-  padding-block: 100px;
-
-  &-items {
-    display: flex;
-    gap: 45px;
-  }
-
-  &-item {
-    background: no-repeat url("./images/project.svg");
-    height: 50px;
-    padding-left: 70px;
-
-    &-title {
-      color: $color-white;
-      font-weight: $font-weight-md;
-      font-size: 21px;
-      line-height: 25px;
-    }
-
-    &-subtitle {
-      color: $color-white;
-      line-height: $primary-line-height;
-    }
-  }
+.about-me__description {
+  margin-inline: auto;
+  margin-top: 50px;
 }
 
 .about-work {
   text-align: center;
   padding-block: 100px;
+}
+.about-work__content iframe {
+  width: 1110px;
+  height: 600px;
+}
 
-  &__content {
-    iframe {
-      width: 1110px;
-      height: 600px;
-    }
-  }
+.projects {
+  padding-block: 100px;
+}
+.projects-items {
+  display: flex;
+  flex-direction: row;
+  gap: 45px;
+  justify-content: center;
+  align-items: center;
+}
+.projects-item {
+  background: no-repeat url("./images/project.svg");
+  height: 50px;
+  padding-left: 70px;
+}
+.projects-title {
+  color: #FFFFFF;
+  font-weight: 32px;
+  font-size: 21px;
+  line-height: 25px;
+}
+.projects-subtitle {
+  color: #FFFFFF;
+  line-height: 26px;
 }
 
 .footer {
   padding-block: 50px;
-
-  &__name {
-    font-weight: $font-weight-md;
-    line-height: 25px;
-    font-size: 21px;
-    color: $color-white;
-    margin-bottom: 20px;
-  }
-
-  &__copyright {
-    line-height: 21px;
-    font-size: 13px;
-    color: $color-white;
-  }
+}
+.footer__name {
+  font-weight: 32px;
+  line-height: 25px;
+  font-size: 21px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+.footer__copyright {
+  line-height: 21px;
+  font-size: 13px;
+  color: #FFFFFF;
 }
 
 /* Media Queries */
@@ -147,41 +147,34 @@ h2 {
     font-size: 2rem;
     line-height: 40px;
   }
-
   .text__description {
     font-size: 14px;
     margin-bottom: 30px;
     max-width: 90%;
   }
-
   .header__button {
     padding: 15px 25px;
     font-size: 14px;
   }
-
   .navbar__list {
     flex-direction: column;
     gap: 20px;
     text-align: center;
   }
-
   .container {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
   }
-
   .projects-items {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
   }
-
   .projects-item {
     padding-left: 60px;
     height: 80px;
   }
-
   .about-work__content iframe {
     width: 90%;
     height: 200px;
@@ -189,108 +182,88 @@ h2 {
     margin: 0 auto;
     display: block;
   }
-
   h2 {
     font-size: 1.5rem;
   }
-
   .footer__name {
     font-size: 18px;
   }
-
   .footer__copyright {
     font-size: 12px;
   }
 }
-
+/* For tablets (768px-1024px) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header__tittle {
     font-size: 2.5rem;
     line-height: 60px;
   }
-
   .text__description {
     font-size: 15px;
     max-width: 80%;
     margin-bottom: 40px;
   }
-
   .header__button {
     padding: 18px 35px;
     font-size: 15px;
   }
-
   .navbar__list {
     gap: 30px;
   }
-
   .projects-items {
     flex-wrap: wrap;
     gap: 30px;
   }
-
   .projects-item {
     padding-left: 60px;
     height: 80px;
   }
-
   .about-work__content iframe {
     width: 90%;
     height: 500px;
   }
-
   h2 {
     font-size: 1.75rem;
   }
-
   .footer__name {
     font-size: 20px;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .header__tittle {
     font-size: 3.5rem;
     line-height: 79px;
   }
-
   .text__description {
     font-size: 16px;
     max-width: 70%;
   }
-
   .header__button {
     padding: 20px 40px;
+    font-size: 16px;
   }
-
   .navbar__list {
     gap: 40px;
   }
-
   .projects-items {
     flex-direction: row;
     gap: 40px;
   }
-
   .projects-item {
     padding-left: 80px;
     height: 120px;
   }
-
   .about-work__content iframe {
     width: 80%;
     height: 600px;
   }
-
   h2 {
     font-size: 2rem;
   }
-
   .footer__name {
     font-size: 22px;
   }
-
   .footer__copyright {
     font-size: 14px;
   }
-}
+}/*# sourceMappingURL=styles.css.map */
